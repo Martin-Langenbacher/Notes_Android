@@ -45,6 +45,11 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteHolder> {
         notifyDataSetChanged();
     }
 
+    //chapter 8 --> so we get the note from the adapter to the outside
+    public Note getNoteAt(int position){
+        return notes.get(position);
+    }
+
 
     class NoteHolder extends RecyclerView.ViewHolder {
         private TextView textViewTitle;
