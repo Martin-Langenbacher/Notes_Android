@@ -59,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChanged(@Nullable List<Note> notes) {
                 // update RecyclerView
-                adapter.setNotes(notes);
+                adapter.submitList(notes);
+                //adapter.setNotes(notes); // deleted in chapter 10;
                 // for test:   --->   Toast.makeText(MainActivity.this, "onChanged", Toast.LENGTH_SHORT).show();
 
             }
